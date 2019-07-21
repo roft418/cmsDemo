@@ -1,0 +1,28 @@
+{
+  "name": "cms-demo",
+  "version": "0.0.0",
+  "description": null,
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "antd": "3.20.5",
+    "classnames": "2.2.5",
+    "less": "3.9.0",
+    "less-loader": "5.0.0",
+    "lodash": "4.17.4",
+    "parcel-bundler": "1.12.3",
+    "react": "16.8.6",
+    "react-dnd": "2.5.4",
+    "react-dnd-html5-backend": "2.5.4",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

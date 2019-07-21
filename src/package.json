@@ -1,0 +1,19 @@
+{
+  "name": "cms-demo",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "antd": "3.20.5",
+    "classnames": "2.2.5",
+    "less": "3.9.0",
+    "less-loader": "5.0.0",
+    "lodash": "4.17.4",
+    "parcel-bundler": "1.12.3",
+    "react": "16.8.6",
+    "react-dnd": "2.5.4",
+    "react-dnd-html5-backend": "2.5.4",
+    "react-dom": "16.8.6"
+  }
+}

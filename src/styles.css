@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+}
+
+.Board {
+  font-family: sans-serif;
+  white-space: nowrap;
+  position: relative;
+}
+
+.Column {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background: #fff;
+
+  /* display: inline-block; */
+  /* vertical-align: top; */
+  width: 225px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  /* margin-right: 20px; */
+  /* background: #465362; */
+  /* color: #bfdbf7; */
+}
+
+.Column__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.Card {
+  padding: 15px;
+  background: #011936;
+  color: #f4fffd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: move;
+}
+
+.Card--spacer,
+.Card--dragging {
+  opacity: 0;
+}
+
+.TextForm__input {
+  display: block;
+  background: #f4fffd;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+
+.TextForm__input:focus {
+  opacity: 1;
+}
+
+.DraggableItem {
+  position: relative;
+  cursor: move;
+}
+
+.CommonUpLoadItem {
+  padding: 6px;
+  box-shadow: 0 2px 4px 0 rgba(52, 57, 65, 0.2);
+}
+
+.block > .ant-upload {
+  width: 100% !important;
+}
+
+.Stage {
+  position: absolute;
+  top: 0px;
+  left: 225px;
+  right: 400px;
+  display: flex;
+  justify-content: center;
+  /* vertical-align: top; */
+  /* width: 225px; */
+  padding: 10px 15px;
+  border-radius: 5px;
+  /* margin-right: 20px; */
+  background: #fff;
+  color: #bfdbf7;
+}
+
+.Main {
+  /* position: absolute; */
+  width: 375px;
+  min-height: 601px;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+}
+.Main__head {
+  background-image: url(https://img.yzcdn.cn/public_files/2019/02/11/14417a76b49dac2851efaf744f87cdb4.png);
+  width: 375px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+}
+
+.active::before {
+  position: absolute;
+  content: "";
+  width: 379px;
+  height: 100%;
+  border: 2px solid #038;
+  left: -2px;
+  top: 0;
+  z-index: 999;
+}
+
+.Carousel {
+  margin-bottom: 10px;
+  position: relative;
+}
+.Carousel .img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Carousel .img-item.initial {
+  height: 140px;
+}
+
+.EntranceList {
+  margin-bottom: 10px;
+  position: relative;
+}
+.EntranceList .img-item {
+  display: inline-block;
+  overflow: hidden;
+}
+.EntranceList .img-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+.EntranceList .img-item.initial {
+  height: 140px;
+}
+.EntranceList.four {
+  overflow: hidden;
+}
+.EntranceList.five {
+  overflow: hidden;
+}
+
+.Entrance {
+  overflow: hidden;
+  text-align: center;
+}
+.EntranceList .Entrance.four {
+  width: 25%;
+  height: 126px;
+  float: left;
+}
+.EntranceList .Entrance.four .img-item {
+  height: 93px;
+}
+.EntranceList .Entrance.five {
+  width: 20%;
+  height: 71px;
+  float: left;
+}
+.EntranceList .Entrance.five .img-item {
+  height: 48px;
+}
+
+.AdvertList {
+  margin-bottom: 10px;
+  position: relative;
+}
+.AdvertList .img-item {
+  display: inline-block;
+  overflow: hidden;
+}
+.AdvertList .img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.AdvertList .img-item.initial {
+  height: 140px;
+}
+.AdvertList.one {
+  overflow: hidden;
+}
+.AdvertList.oneVsTwo {
+  overflow: hidden;
+}
+.AdvertList .Advert.one {
+  width: 100%;
+  height: 140px;
+  float: left;
+}
+.AdvertList .Advert.oneVsTwo {
+  width: 50%;
+  height: 20px;
+  float: left;
+}
+.AdvertList .Advert.oneVsTwo:nth-child(1) {
+  width: 50%;
+  height: 145px;
+  float: left;
+}
+
+.GoodsList {
+  margin-bottom: 10px;
+  position: relative;
+}
+.GoodsList .img-item {
+  display: inline-block;
+  overflow: hidden;
+}
+.GoodsList .img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.GoodsList .img-item.initial {
+  height: 140px;
+}
+.GoodsList.list {
+  overflow: hidden;
+}
+.GoodsList.two {
+  overflow: hidden;
+}
+.GoodsList.three {
+  overflow: hidden;
+}
+.GoodsList.swipe {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.Goods {
+  overflow: hidden;
+  text-align: center;
+}
+
+.GoodsList .Goods.list {
+  display: flex;
+  height: 108px;
+}
+.GoodsList .Goods.list .img-item {
+  flex: 1;
+  height: 108px;
+}
+.GoodsList .Goods.list .content-item {
+  flex: 3;
+  height: 108px;
+}
+.GoodsList .Goods.two {
+  width: 50%;
+  height: 250px;
+  float: left;
+}
+.GoodsList .Goods.two .img-item {
+  height: 152px;
+}
+.GoodsList .Goods.three {
+  width: 33.33%;
+  height: 186px;
+  float: left;
+}
+.GoodsList .Goods.three .img-item {
+  height: 113px;
+}
+.GoodsList .Goods.swipe {
+  flex: 0 0 30%;
+  height: 215px;
+}
+.GoodsList .Goods.swipe .img-item {
+  height: 137px;
+}
+
+.SplitLine {
+  margin-bottom: 10px;
+  position: relative;
+  /* padding: 15px; */
+  /* background: #011936; */
+  /* color: #f4fffd; */
+}
+.SplitLine .img-item {
+  display: inline-block;
+  overflow: hidden;
+}
+.SplitLine .img-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.SplitLine .img-item .initial {
+  height: 200px;
+}
+
+.Editor {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 500px;
+  /* vertical-align: top; */
+  padding: 10px 15px;
+  border-radius: 5px;
+  /* margin-right: 20px; */
+  background: #fff;
+}
+
+.Editor__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.SplitLineEditor .img-item {
+  overflow: hidden;
+  width: 100%;
+  height: 42px;
+}
+.SplitLineEditor .img-item img {
+  width: 99%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.selected {
+  margin-left: 1px;
+  border: 1px solid #ff9727;
+}
+
+.Item--spacer,
+.Item--dragging {
+  opacity: 0.7;
+}
